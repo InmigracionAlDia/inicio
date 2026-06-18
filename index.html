@@ -7,7 +7,7 @@
     <meta name="description" content="Somos abogados de inmigración
 Te ayudamos con tu proceso migratorio en EE.UU.
 Consulta GRATIS en los 50 estados">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:description" content="Somos abogados de inmigración
 Te ayudamos con tu proceso migratorio en EE.UU.
 Consulta GRATIS en los 50 estados">
@@ -25,7 +25,7 @@ Consulta GRATIS en los 50 estados">
     <meta http-equiv="content-language" content="en">
     <link rel="canonical" href="https://inmigracionaldia.com">
 
-    <!-- NUEVO META PIXEL (reemplaza al anterior) -->
+    <!-- META PIXEL -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -44,7 +44,7 @@ Consulta GRATIS en los 50 estados">
     <!-- END META PIXEL -->
 
     <style>
-        /* ===== ESTILOS ORIGINALES DE LA PÁGINA ===== */
+        /* ===== ESTILOS ORIGINALES ===== */
         a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}
         .hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}
         .hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}
@@ -107,44 +107,47 @@ Consulta GRATIS en los 50 estados">
             overflow-x: hidden;
         }
 
-        /* HEADER ORIGINAL */
+        /* ===== HEADER OPTIMIZADO PARA MÓVIL ===== */
         .header__container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 15px 20px;
+            padding: 10px 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         .header__logo img {
-            width: 180px;
+            width: 140px;
         }
         .box-llamada {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             background-color: #1a3b5d;
             color: white;
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: 50px;
             font-weight: bold;
             cursor: pointer;
             transition: background 0.3s;
             border: none;
             font-family: inherit;
-            font-size: 1rem;
+            font-size: 0.9rem;
+            white-space: nowrap;
         }
         .box-llamada:hover {
             background-color: #0f2a42;
         }
         .box-llamada svg {
             fill: white;
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
         }
         .box-header-new {
             background-color: white;
-            padding: 0 20px;
+            padding: 0 15px;
+            width: 100%;
         }
         .content-header-new {
             max-width: 1200px;
@@ -152,30 +155,107 @@ Consulta GRATIS en los 50 estados">
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 0;
+            padding: 8px 0;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .content-img-items {
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 20px;
+            flex-wrap: wrap;
         }
         .logo-iad {
-            height: 40px;
+            height: 32px;
         }
         .items-menu {
             display: flex;
-            gap: 25px;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
         }
         .item a {
             font-weight: 600;
             color: #1a3b5d;
-            font-size: 15px;
+            font-size: 14px;
+            white-space: nowrap;
         }
         .item a:hover {
             color: #c0392b;
         }
 
-        /* ===== TODOS LOS ESTILOS ORIGINALES DE LAS SECCIONES ===== */
+        /* ===== RESPONSIVE HEADER ===== */
+        @media (max-width: 768px) {
+            .header__container {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 8px 12px;
+            }
+            .header__logo {
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            .header__logo img {
+                width: 120px;
+            }
+            .box-header-new {
+                padding: 0 10px;
+            }
+            .content-header-new {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                padding: 5px 0;
+            }
+            .content-img-items {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                width: 100%;
+            }
+            .logo-iad {
+                height: 28px;
+            }
+            .items-menu {
+                justify-content: center;
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+            .item a {
+                font-size: 13px;
+            }
+            .box-llamada {
+                padding: 6px 14px;
+                font-size: 0.85rem;
+                align-self: center;
+            }
+            .box-llamada svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .items-menu {
+                gap: 8px;
+            }
+            .item a {
+                font-size: 12px;
+            }
+            .header__logo img {
+                width: 100px;
+            }
+            .box-llamada {
+                padding: 5px 12px;
+                font-size: 0.8rem;
+            }
+            .box-llamada svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        /* ===== RESTO DE ESTILOS ORIGINALES ===== */
         .hs_home-layout {
             max-width: 1200px;
             margin: 0 auto;
@@ -517,6 +597,8 @@ Consulta GRATIS en los 50 estados">
             justify-content: space-between;
             align-items: center;
             margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .title_slider {
             display: flex;
@@ -726,6 +808,7 @@ Consulta GRATIS en los 50 estados">
             display: flex;
             gap: 15px;
             margin: 20px 0;
+            flex-wrap: wrap;
         }
         .icon-footer a {
             background: rgba(255,255,255,0.1);
@@ -757,6 +840,8 @@ Consulta GRATIS en los 50 estados">
             justify-content: space-between;
             padding: 5px 0;
             border-bottom: 1px solid rgba(255,255,255,0.05);
+            flex-wrap: wrap;
+            gap: 5px;
         }
         .phone-footer .number {
             color: white;
@@ -850,6 +935,8 @@ Consulta GRATIS en los 50 estados">
             position: relative;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             animation: modalFadeIn 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto;
         }
         @keyframes modalFadeIn {
             from { opacity: 0; transform: scale(0.9); }
@@ -935,7 +1022,7 @@ Consulta GRATIS en los 50 estados">
             height: 24px;
         }
 
-        /* RESPONSIVE */
+        /* ===== RESPONSIVE COMPLETO ===== */
         @media (max-width: 992px) {
             .hs_home-third-row {
                 grid-template-columns: 1fr;
@@ -952,63 +1039,210 @@ Consulta GRATIS en los 50 estados">
             .box-footer {
                 grid-template-columns: 1fr;
             }
-        }
-        @media (max-width: 768px) {
             .hs_home-main-banner_title {
-                font-size: 2rem;
+                font-size: 2.4rem;
             }
             .hs_home-second-description {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hs_home-layout {
+                padding: 20px 12px;
+            }
+            .hs_home-main-wrapper-banner {
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+            .hs_home-main-banner_title {
+                font-size: 1.8rem;
+            }
+            .hs_home-main-banner_description {
+                font-size: 1rem;
+            }
+            .hs_home-call_to_action {
+                padding: 14px 28px;
+                font-size: 1rem;
+            }
+            .hs_home-second-description {
+                font-size: 1.4rem;
+            }
+            .hs_home-second-steps-wrapper {
+                flex-direction: column;
+            }
+            .hs_home-second-step-column {
+                min-width: auto;
+                width: 100%;
+            }
+            .hs_home-third-row {
+                grid-template-columns: 1fr;
+                gap: 25px;
             }
             .hs_home-third-content-services {
                 grid-template-columns: 1fr;
             }
+            .hs_home-third-highlight-column h3 {
+                font-size: 1.6rem;
+            }
             .hs_home-four-row {
                 grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .hs_home-card-background {
+                height: 250px;
+            }
+            .hs_home-row-five-title h3 {
+                font-size: 1.6rem;
+            }
+            .hs_home-row-five-title img {
+                height: 35px;
+            }
+            .hs_home-row-five p {
+                font-size: 1rem;
             }
             .slider .item {
                 flex: 0 0 50%;
+                padding: 0 8px;
             }
-            .links-footer {
-                grid-template-columns: 1fr 1fr;
+            .content_img img {
+                height: 220px;
             }
-            .content-header-new {
+            .head_slide {
                 flex-direction: column;
-                gap: 15px;
+                align-items: flex-start;
             }
-            .content-img-items {
-                flex-wrap: wrap;
-                justify-content: center;
+            .title_slider h3 {
+                font-size: 1.4rem;
             }
-            .items-menu {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
+            .rows_slider {
+                align-self: flex-end;
+            }
+            .hs_home-row-contact {
+                padding: 40px 20px;
+                border-radius: 15px;
             }
             .hs_home-row-contact h2 {
                 font-size: 1.8rem;
             }
-            .box-llamada {
-                padding: 8px 15px;
-                font-size: 0.9rem;
+            .hs_home-row-contact p {
+                font-size: 1rem;
+            }
+            .hs_home-row-contact-call-to-actions .hs_home-call_to_action {
+                min-width: 160px;
+                font-size: 0.95rem;
+                padding: 12px 24px;
+            }
+            .acordeon .etiqueta {
+                font-size: 1rem;
+            }
+            .links-footer {
+                grid-template-columns: 1fr 1fr;
+            }
+            .content-info-footer {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .content-info-footer h5 {
+                font-size: 1rem;
             }
             .phone-footer {
                 flex-direction: column;
-                gap: 5px;
+                gap: 2px;
             }
             .modal-content {
                 padding: 25px;
+                width: 95%;
+            }
+            .modal-content h2 {
+                font-size: 1.5rem;
             }
         }
+
         @media (max-width: 480px) {
+            .hs_home-main-wrapper-banner {
+                padding: 20px 15px;
+            }
+            .hs_home-main-banner_title {
+                font-size: 1.5rem;
+            }
+            .hs_home-call_to_action {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+            .hs_home-second-title {
+                font-size: 1.2rem;
+            }
+            .hs_home-second-description {
+                font-size: 1.2rem;
+            }
+            .hs_home-second-step {
+                padding: 15px 0;
+            }
+            .hs_home-second-step-icon {
+                width: 45px;
+                height: 45px;
+            }
+            .hs_home-second-step-icon img {
+                width: 22px;
+                height: 22px;
+            }
+            .hs_home-third-highlight-column h3 {
+                font-size: 1.4rem;
+            }
+            .hs_home-third-service {
+                padding: 18px;
+            }
+            .hs_home-card-background {
+                height: 200px;
+            }
             .slider .item {
                 flex: 0 0 100%;
+                padding: 0 5px;
+            }
+            .content_img img {
+                height: 200px;
+            }
+            .title_slider h3 {
+                font-size: 1.2rem;
+            }
+            .title_slider img {
+                width: 24px;
+            }
+            .rows_slider button img {
+                width: 32px;
+            }
+            .hs_home-row-contact {
+                padding: 30px 15px;
+            }
+            .hs_home-row-contact h2 {
+                font-size: 1.5rem;
+            }
+            .hs_home-row-contact-call-to-actions .hs_home-call_to_action {
+                min-width: 140px;
+                font-size: 0.85rem;
+                padding: 10px 18px;
             }
             .links-footer {
                 grid-template-columns: 1fr;
             }
-            .hs_home-main-wrapper-banner {
-                padding: 30px 20px;
+            .box-footer {
+                gap: 20px;
+            }
+            .content-phone-footer img {
+                width: 150px;
+            }
+            .icon-footer a {
+                width: 34px;
+                height: 34px;
+            }
+            .icon-footer svg {
+                width: 16px;
+                height: 16px;
+            }
+            .txt-tyc {
+                font-size: 0.75rem;
+                gap: 5px;
             }
         }
     </style>
@@ -1017,36 +1251,31 @@ Consulta GRATIS en los 50 estados">
 
     <div class="body-wrapper">
 
-        <!-- ===== HEADER ORIGINAL ===== -->
+        <!-- ===== HEADER OPTIMIZADO ===== -->
         <header class="header">
             <div class="header__container">
-                <div class="headere-only-mobile">
-                    <div class="box-content-header">
-                        <div class="header__logo header__logo--main">
-                            <a href="#inicio">
-                                <img src="https://23992612.fs1.hubspotusercontent-na1.net/hub/23992612/hubfs/Logo-IAD.webp?width=351&height=52&name=Logo-IAD.webp" alt="Inmigración al Día" style="width:180px;">
-                            </a>
-                        </div>
-                    </div>
+                <div class="header__logo header__logo--main">
+                    <a href="#inicio">
+                        <img src="https://23992612.fs1.hubspotusercontent-na1.net/hub/23992612/hubfs/Logo-IAD.webp?width=351&height=52&name=Logo-IAD.webp" alt="Inmigración al Día">
+                    </a>
                 </div>
-                <div class="box-header-new">
-                    <div class="content-header-new">
-                        <div class="content-img-items">
-                            <a href="#inicio">
-                                <img class="logo-iad" src="https://23992612.fs1.hubspotusercontent-na1.net/hubfs/23992612/raw_assets/public/website-theme/images/Logo-iad.svg" alt="Logo IAD">
-                            </a>
-                            <div class="items-menu">
-                                <div class="content-li"><div class="item"><a href="#inicio">Inicio</a></div></div>
-                                <div class="content-li"><div class="item"><a href="#">Inmigración</a></div></div>
-                                <div class="content-li"><div class="item"><a href="#">Ayuda</a></div></div>
-                                <div class="content-li"><div class="item"><a href="#">Sobre Nosotros</a></div></div>
-                            </div>
+                <button class="box-llamada" id="teLlamamosBtnHeader">
+                    <p>Te llamamos</p>
+                    <svg viewBox="0 0 960 960"><path d="M792 955q-125 0-249-61.5T320.5 734q-98.5-98-160-223T99 263q0-28 20-48.5t49-20.5h135q32 0 51.5 16t25.5 47l27 106q4 28-2 47.5T383 444l-103 94q50 79 109 136.5T520 773l99-99q17-18 38-25t47-1l94 23q31 8 47 28.5t16 50.5v135q0 30-20 50t-49 20z"/></svg>
+                </button>
+            </div>
+            <div class="box-header-new">
+                <div class="content-header-new">
+                    <div class="content-img-items">
+                        <a href="#inicio">
+                            <img class="logo-iad" src="https://23992612.fs1.hubspotusercontent-na1.net/hubfs/23992612/raw_assets/public/website-theme/images/Logo-iad.svg" alt="Logo IAD">
+                        </a>
+                        <div class="items-menu">
+                            <div class="content-li"><div class="item"><a href="#inicio">Inicio</a></div></div>
+                            <div class="content-li"><div class="item"><a href="#">Inmigración</a></div></div>
+                            <div class="content-li"><div class="item"><a href="#">Ayuda</a></div></div>
+                            <div class="content-li"><div class="item"><a href="#">Sobre Nosotros</a></div></div>
                         </div>
-                        <!-- BOTÓN TE LLAMAMOS - AHORA ABRE EL FORMULARIO -->
-                        <button class="box-llamada" id="teLlamamosBtnHeader">
-                            <p>Te llamamos</p>
-                            <svg viewBox="0 0 960 960"><path d="M792 955q-125 0-249-61.5T320.5 734q-98.5-98-160-223T99 263q0-28 20-48.5t49-20.5h135q32 0 51.5 16t25.5 47l27 106q4 28-2 47.5T383 444l-103 94q50 79 109 136.5T520 773l99-99q17-18 38-25t47-1l94 23q31 8 47 28.5t16 50.5v135q0 30-20 50t-49 20z"/></svg>
-                        </button>
                     </div>
                 </div>
             </div>
@@ -1055,7 +1284,7 @@ Consulta GRATIS en los 50 estados">
         <!-- ===== ANCLA DE INICIO ===== -->
         <div id="inicio"></div>
 
-        <!-- ===== MAIN CONTENT (IDÉNTICO AL ORIGINAL) ===== -->
+        <!-- ===== MAIN CONTENT ===== -->
         <main id="main-content" class="body-container-wrapper">
 
             <!-- BANNER PRINCIPAL -->
@@ -1067,7 +1296,6 @@ Consulta GRATIS en los 50 estados">
                     <p class="hs_home-main-banner_description">
                         Somos un equipo de abogados con experiencia en procesos migratorios representando a miles de hispanos en los Estados Unidos.
                     </p>
-                    <!-- BOTÓN AGENDA TU CONSULTA - ABRE FORMULARIO -->
                     <button id="agendarConsultaBtn" class="hs_home-call_to_action variant_blue" style="border:none;">
                         Agenda tu consulta sin costo
                         <img src="https://23992612.fs1.hubspotusercontent-na1.net/hubfs/23992612/raw_assets/public/website-theme/images/module-icons/arrow-right-white.svg" alt="flecha">
@@ -1287,12 +1515,10 @@ Consulta GRATIS en los 50 estados">
                     <h2>Estamos donde nos necesites</h2>
                     <p>Atendemos casos en los 50 estados de los Estados Unidos. ¡Empieza tu proceso hoy mismo!</p>
                     <div class="hs_home-row-contact-call-to-actions">
-                        <!-- BOTÓN AGENDA TU CONSULTA GRATIS - ABRE FORMULARIO -->
                         <button id="agendarConsultaBtn2" class="hs_home-call_to_action variant_blue" style="border:none;">
                             Agenda tu consulta gratis
                             <img src="https://23992612.fs1.hubspotusercontent-na1.net/hubfs/23992612/raw_assets/public/website-theme/images/module-icons/arrow-right-white.svg" alt="">
                         </button>
-                        <!-- BOTÓN TE LLAMAMOS - ABRE FORMULARIO -->
                         <button id="teLlamamosBtnFooter" class="hs_home-call_to_action variant_soft-blue" style="border:none;">
                             Te llamamos
                             <img src="https://23992612.fs1.hubspotusercontent-na1.net/hubfs/23992612/raw_assets/public/website-theme/images/module-icons/phone-outline-blue.svg" alt="">
@@ -1307,7 +1533,7 @@ Consulta GRATIS en los 50 estados">
 
         </main>
 
-        <!-- ===== FOOTER ORIGINAL ===== -->
+        <!-- ===== FOOTER ===== -->
         <div class="content-footer">
             <div class="box-footer">
                 <div class="content-phone-footer">
@@ -1320,13 +1546,13 @@ Consulta GRATIS en los 50 estados">
                     </div>
                     <p class="title-contact">Contáctanos</p>
                     <div>
-                        <div class="phone-footer"><p>Línea atención comercial</p><a href="tel:+1(787)965-8614" class="number">(787) 965-8614</a></div>
-                        <div class="phone-footer"><p>Línea asesoría</p><a href="tel:+1(787)965-8614" class="number">(787) 965-8614</a></div>
-                        <div class="phone-footer"><p>Atención al cliente</p><a href="tel:+(787)9658614" class="number">(787) 965-8614</a></div>
-                        <div class="phone-footer"><p>Línea exclusiva de pago</p><a href="tel:+1(787)965-8614" class="number">(787) 965-8614</a></div>
+                        <div class="phone-footer"><p>Línea atención comercial</p><a href="tel:+(864)823-2893" class="number">(864) 823-2893</a></div>
+                        <div class="phone-footer"><p>Línea asesoría</p><a href="tel:+(864)335-9964" class="number">(864) 335-9964</a></div>
+                        <div class="phone-footer"><p>Atención al cliente</p><a href="tel:+(864)8232887" class="number">(864) 823 2887</a></div>
+                        <div class="phone-footer"><p>Línea exclusiva de pago</p><a href="tel:+(864)823-2880" class="number">(864) 823-2880</a></div>
                         <div class="phone-footer"><p style="width:50%">Línea atención Whatsapp servicio al cliente</p><a style="align-self:center" href="tel:+(864)665-3069" class="number">(864) 665-3069</a></div>
                         <div class="phone-footer"><p>Correo:</p></div>
-                        <div class="phone-footer"><a href="mailto:inmigracionaldia514@gmail.com">inmigracionaldia514@gmail.com</a></div>
+                        <div class="phone-footer"><a href="mailto:servicioalcliente@inmigracionaldia.com">servicioalcliente@inmigracionaldia.com</a></div>
                     </div>
                 </div>
                 <div class="line-footer"><hr></div>
@@ -1373,16 +1599,14 @@ Consulta GRATIS en los 50 estados">
             </div>
         </div>
 
-    </div> <!-- Fin body-wrapper -->
+    </div>
 
-
-    <!-- ===== MODAL DEL FORMULARIO PARA AGENDAR CONSULTA ===== -->
+    <!-- ===== MODAL ===== -->
     <div class="modal-overlay" id="modalFormulario">
         <div class="modal-content">
             <button class="modal-close" id="cerrarFormularioBtn">&times;</button>
             <h2>Agenda tu consulta</h2>
             <p class="subtitle">Completa el formulario y uno de nuestros abogados te contactará.</p>
-
             <form id="formularioWhatsApp">
                 <div class="form-group">
                     <label for="nombre">Nombre completo</label>
@@ -1400,7 +1624,6 @@ Consulta GRATIS en los 50 estados">
                     <label for="mensaje">Mensaje (opcional)</label>
                     <textarea id="mensaje" placeholder="Cuéntanos brevemente tu caso..."></textarea>
                 </div>
-
                 <button type="button" class="btn-enviar-whatsapp" id="enviarWhatsAppBtn">
                     <svg viewBox="0 0 24 24" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     Enviar solicitud por WhatsApp
@@ -1409,10 +1632,9 @@ Consulta GRATIS en los 50 estados">
         </div>
     </div>
 
-
     <!-- ===== SCRIPTS ===== -->
     <script>
-        // ---------- ACORDEÓN ----------
+        // ACORDEÓN
         document.querySelectorAll('.acordeon .contenedor').forEach(container => {
             const label = container.querySelector('.etiqueta');
             label.addEventListener('click', function() {
@@ -1420,7 +1642,7 @@ Consulta GRATIS en los 50 estados">
             });
         });
 
-        // ---------- SLIDER DE ABOGADOS ----------
+        // SLIDER
         document.addEventListener("DOMContentLoaded", function() {
             var slidesContainer = document.getElementById('slides-container');
             var slides = slidesContainer.getElementsByClassName('item');
@@ -1457,71 +1679,52 @@ Consulta GRATIS en los 50 estados">
             showCurrentSlide();
         });
 
-        // ---------- MODAL DEL FORMULARIO ----------
+        // MODAL
         const modal = document.getElementById('modalFormulario');
         const cerrarBtn = document.getElementById('cerrarFormularioBtn');
 
-        // Función para abrir el modal
         function abrirModal(e) {
             if (e) e.preventDefault();
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
-        // Función para cerrar el modal
         function cerrarModal() {
             modal.classList.remove('active');
             document.body.style.overflow = '';
         }
 
-        // Asignar apertura a TODOS los botones:
-        // 1. Botón "Agenda tu consulta sin costo" del banner
         document.getElementById('agendarConsultaBtn').addEventListener('click', abrirModal);
-        
-        // 2. Botón "Agenda tu consulta gratis" del footer
         document.getElementById('agendarConsultaBtn2').addEventListener('click', abrirModal);
-        
-        // 3. Botón "Te llamamos" del header
         document.getElementById('teLlamamosBtnHeader').addEventListener('click', abrirModal);
-        
-        // 4. Botón "Te llamamos" del footer
         document.getElementById('teLlamamosBtnFooter').addEventListener('click', abrirModal);
 
-        // Cerrar modal
         cerrarBtn.addEventListener('click', cerrarModal);
         modal.addEventListener('click', function(e) {
             if (e.target === modal) cerrarModal();
         });
 
-        // ---------- ENVÍO POR WHATSAPP CON PÍXEL DE META ----------
+        // WHATSAPP
         const enviarBtn = document.getElementById('enviarWhatsAppBtn');
-
         enviarBtn.addEventListener('click', function() {
-            // 1. Obtener datos del formulario
             const nombre = document.getElementById('nombre').value.trim();
             const email = document.getElementById('email').value.trim();
             const telefono = document.getElementById('telefono').value.trim();
             const mensaje = document.getElementById('mensaje').value.trim();
 
-            // Validar campos obligatorios
             if (!nombre || !email || !telefono) {
                 alert('Por favor, completa todos los campos obligatorios (Nombre, Correo y Teléfono).');
                 return;
             }
 
-            // 2. Construir el mensaje para WhatsApp
             const textoWhatsApp = `Hola, soy ${nombre}.%0A` +
                                  `Mi correo es: ${email}%0A` +
                                  `Mi teléfono es: ${telefono}%0A` +
                                  `Mensaje: ${mensaje || 'Sin mensaje adicional.'}`;
 
-            // 3. Número de WhatsApp (sin +, solo dígitos)
-            const numeroWhatsApp = '17879658614'; // +1 787 965 8614
-
-            // 4. URL de WhatsApp
+            const numeroWhatsApp = '17879658614';
             const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoWhatsApp}`;
 
-            // 5. DISPARAR EL PÍXEL DE META (track de conversión 'Lead')
             if (typeof fbq === 'function') {
                 fbq('track', 'Lead', {
                     content_name: 'Solicitud de consulta',
@@ -1529,21 +1732,12 @@ Consulta GRATIS en los 50 estados">
                     value: 0,
                     currency: 'USD'
                 });
-                console.log('✅ Pixel de Meta: Evento "Lead" enviado.');
-            } else {
-                console.warn('⚠️ Pixel de Meta no disponible.');
             }
 
-            // 6. Abrir WhatsApp en nueva ventana
             window.open(urlWhatsApp, '_blank');
-
-            // 7. Cerrar el modal después de unos segundos
-            setTimeout(() => {
-                cerrarModal();
-            }, 1500);
+            setTimeout(() => cerrarModal(), 1500);
         });
 
-        // Prevenir envío tradicional del formulario
         document.getElementById('formularioWhatsApp').addEventListener('submit', function(e) {
             e.preventDefault();
         });
