@@ -7,7 +7,7 @@
     <meta name="description" content="Somos abogados de inmigración
 Te ayudamos con tu proceso migratorio en EE.UU.
 Consulta GRATIS en los 50 estados">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta property="og:description" content="Somos abogados de inmigración
 Te ayudamos con tu proceso migratorio en EE.UU.
 Consulta GRATIS en los 50 estados">
@@ -44,7 +44,7 @@ Consulta GRATIS en los 50 estados">
     <!-- END META PIXEL -->
 
     <style>
-        /* ===== ESTILOS BASE ===== */
+        /* ===== RESET ===== */
         * {
             margin: 0;
             padding: 0;
@@ -52,9 +52,10 @@ Consulta GRATIS en los 50 estados">
         }
         body {
             font-family: "Mulish", "Poppins", sans-serif;
-            background-color: #fff;
+            background: #fff;
             color: #333;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
         a {
             text-decoration: none;
@@ -63,13 +64,14 @@ Consulta GRATIS en los 50 estados">
         img {
             max-width: 100%;
             height: auto;
+            display: block;
         }
         .body-wrapper {
             max-width: 100%;
             overflow-x: hidden;
         }
 
-        /* ===== HEADER PROPORCIONADO ===== */
+        /* ===== HEADER ===== */
         .header__container {
             max-width: 1200px;
             margin: 0 auto;
@@ -80,34 +82,33 @@ Consulta GRATIS en los 50 estados">
         }
         .header__logo img {
             width: 160px;
-            display: block;
         }
         .box-llamada {
             display: flex;
             align-items: center;
             gap: 8px;
-            background-color: #1a3b5d;
-            color: white;
+            background: #1a3b5d;
+            color: #fff;
             padding: 10px 20px;
             border-radius: 50px;
             font-weight: 700;
-            cursor: pointer;
-            transition: background 0.3s;
             border: none;
+            cursor: pointer;
             font-family: inherit;
             font-size: 0.95rem;
             white-space: nowrap;
+            transition: background 0.3s;
         }
         .box-llamada:hover {
-            background-color: #0f2a42;
+            background: #0f2a42;
         }
         .box-llamada svg {
-            fill: white;
+            fill: #fff;
             width: 22px;
             height: 22px;
         }
         .box-header-new {
-            background-color: white;
+            background: #fff;
             padding: 0 20px;
             border-top: 1px solid #eef0f2;
         }
@@ -142,10 +143,12 @@ Consulta GRATIS en los 50 estados">
             color: #c0392b;
         }
 
-        /* ===== RESPONSIVE HEADER ARMÓNICO ===== */
+        /* ===== RESPONSIVE HEADER ===== */
         @media (max-width: 768px) {
             .header__container {
                 padding: 10px 16px;
+                flex-wrap: wrap;
+                gap: 8px;
             }
             .header__logo img {
                 width: 130px;
@@ -153,7 +156,6 @@ Consulta GRATIS en los 50 estados">
             .box-llamada {
                 padding: 8px 16px;
                 font-size: 0.85rem;
-                gap: 6px;
             }
             .box-llamada svg {
                 width: 18px;
@@ -166,7 +168,6 @@ Consulta GRATIS en los 50 estados">
                 flex-direction: column;
                 align-items: center;
                 padding: 8px 0;
-                gap: 6px;
             }
             .content-img-items {
                 flex-direction: column;
@@ -197,7 +198,6 @@ Consulta GRATIS en los 50 estados">
             .box-llamada {
                 padding: 6px 14px;
                 font-size: 0.78rem;
-                gap: 5px;
             }
             .box-llamada svg {
                 width: 16px;
@@ -205,9 +205,6 @@ Consulta GRATIS en los 50 estados">
             }
             .box-header-new {
                 padding: 0 12px;
-            }
-            .content-img-items {
-                gap: 6px;
             }
             .logo-iad {
                 height: 28px;
@@ -220,7 +217,7 @@ Consulta GRATIS en los 50 estados">
             }
         }
 
-        /* ===== RESTO DE ESTILOS ORIGINALES CON PROPORCIONES MEJORADAS ===== */
+        /* ===== SECCIONES ===== */
         .hs_home-layout {
             max-width: 1200px;
             margin: 0 auto;
@@ -231,7 +228,6 @@ Consulta GRATIS en los 50 estados">
             border-radius: 20px;
             padding: 60px 50px;
             text-align: center;
-            position: relative;
         }
         .hs_home-main-banner_title {
             font-size: 2.8rem;
@@ -257,34 +253,34 @@ Consulta GRATIS en los 50 estados">
             border-radius: 50px;
             font-weight: 700;
             font-size: 1.1rem;
-            transition: all 0.3s;
             border: none;
             cursor: pointer;
             font-family: inherit;
+            transition: all 0.3s;
         }
         .hs_home-call_to_action.variant_blue {
-            background-color: #1a3b5d;
-            color: white;
+            background: #1a3b5d;
+            color: #fff;
         }
         .hs_home-call_to_action.variant_blue:hover {
-            background-color: #0f2a42;
+            background: #0f2a42;
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(26, 59, 93, 0.3);
         }
         .hs_home-call_to_action.variant_white {
-            background-color: white;
+            background: #fff;
             color: #1a3b5d;
             border: 2px solid #1a3b5d;
         }
         .hs_home-call_to_action.variant_white:hover {
-            background-color: #f0f0f0;
+            background: #f0f0f0;
         }
         .hs_home-call_to_action.variant_soft-blue {
-            background-color: #e8f0fe;
+            background: #e8f0fe;
             color: #1a3b5d;
         }
         .hs_home-call_to_action.variant_soft-blue:hover {
-            background-color: #d0e0f8;
+            background: #d0e0f8;
         }
         .hs_home-main-banner_confidential_data {
             display: block;
@@ -333,7 +329,7 @@ Consulta GRATIS en los 50 estados">
             padding: 25px 0;
         }
         .hs_home-second-step-icon {
-            background-color: #1a3b5d;
+            background: #1a3b5d;
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -368,7 +364,7 @@ Consulta GRATIS en los 50 estados">
             background: #1a3b5d;
             border-radius: 20px;
             padding: 20px;
-            color: white;
+            color: #fff;
             text-align: center;
         }
         .hs_home-second-step-highlight-banner img {
@@ -468,7 +464,7 @@ Consulta GRATIS en los 50 estados">
             right: 0;
             padding: 20px;
             background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            color: white;
+            color: #fff;
         }
         .hs_home-card-container-small p {
             font-size: 0.9rem;
@@ -615,7 +611,7 @@ Consulta GRATIS en los 50 estados">
         }
         .flip-container .front,
         .flip-container .back {
-            background: white;
+            background: #fff;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             overflow: hidden;
@@ -637,7 +633,7 @@ Consulta GRATIS en los 50 estados">
             align-items: center;
             justify-content: center;
             background: #1a3b5d;
-            color: white;
+            color: #fff;
             border-radius: 15px;
         }
         .flip-container:hover .front {
@@ -707,7 +703,7 @@ Consulta GRATIS en los 50 estados">
             border-radius: 20px;
             padding: 60px 40px;
             text-align: center;
-            color: white;
+            color: #fff;
             position: relative;
             overflow: hidden;
         }
@@ -752,7 +748,6 @@ Consulta GRATIS en los 50 estados">
             filter: brightness(0) invert(1);
         }
 
-        /* FOOTER */
         .content-footer {
             background: #0f1f2e;
             color: #ccc;
@@ -789,13 +784,13 @@ Consulta GRATIS en los 50 estados">
             background: rgba(255,255,255,0.2);
         }
         .icon-footer svg {
-            fill: white;
+            fill: #fff;
             width: 20px;
             height: 20px;
         }
         .title-contact {
             font-weight: 700;
-            color: white;
+            color: #fff;
             font-size: 1.2rem;
             margin-top: 20px;
             margin-bottom: 15px;
@@ -809,7 +804,7 @@ Consulta GRATIS en los 50 estados">
             gap: 5px;
         }
         .phone-footer .number {
-            color: white;
+            color: #fff;
             font-weight: 600;
         }
         .phone-footer a {
@@ -830,7 +825,7 @@ Consulta GRATIS en los 50 estados">
             gap: 40px;
         }
         .content-info-footer h5 {
-            color: white;
+            color: #fff;
             font-size: 1.2rem;
             line-height: 1.5;
             font-weight: 400;
@@ -848,10 +843,10 @@ Consulta GRATIS en los 50 estados">
             transition: color 0.3s;
         }
         .links-footer a:hover {
-            color: white;
+            color: #fff;
         }
         .title-links {
-            color: white;
+            color: #fff;
             font-weight: 700;
             margin-bottom: 10px;
             font-size: 1rem;
@@ -874,7 +869,7 @@ Consulta GRATIS en los 50 estados">
             color: #8ab4f8;
         }
 
-        /* MODAL */
+        /* ===== MODAL ===== */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -882,7 +877,7 @@ Consulta GRATIS en los 50 estados">
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0,0,0,0.6);
             z-index: 1000;
             justify-content: center;
             align-items: center;
@@ -892,7 +887,7 @@ Consulta GRATIS en los 50 estados">
             display: flex;
         }
         .modal-content {
-            background: white;
+            background: #fff;
             border-radius: 20px;
             padding: 40px;
             max-width: 500px;
@@ -948,8 +943,8 @@ Consulta GRATIS en los 50 estados">
             border: 2px solid #e0e0e0;
             border-radius: 10px;
             font-size: 1rem;
-            transition: border 0.3s;
             font-family: inherit;
+            transition: border 0.3s;
         }
         .form-group input:focus,
         .form-group textarea:focus {
@@ -963,8 +958,8 @@ Consulta GRATIS en los 50 estados">
         .btn-enviar-whatsapp {
             width: 100%;
             padding: 16px;
-            background-color: #25D366;
-            color: white;
+            background: #25D366;
+            color: #fff;
             border: none;
             border-radius: 50px;
             font-size: 1.1rem;
@@ -974,20 +969,20 @@ Consulta GRATIS en los 50 estados">
             align-items: center;
             justify-content: center;
             gap: 10px;
-            transition: background 0.3s, transform 0.2s;
             font-family: inherit;
+            transition: background 0.3s, transform 0.2s;
         }
         .btn-enviar-whatsapp:hover {
-            background-color: #1ebe5c;
+            background: #1ebe5c;
             transform: scale(1.02);
         }
         .btn-enviar-whatsapp svg {
-            fill: white;
+            fill: #fff;
             width: 24px;
             height: 24px;
         }
 
-        /* ===== RESPONSIVE MEJORADO ===== */
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 992px) {
             .hs_home-third-row {
                 grid-template-columns: 1fr;
@@ -1003,12 +998,6 @@ Consulta GRATIS en los 50 estados">
             }
             .box-footer {
                 grid-template-columns: 1fr;
-            }
-            .hs_home-main-banner_title {
-                font-size: 2.4rem;
-            }
-            .hs_home-second-description {
-                font-size: 1.8rem;
             }
         }
 
@@ -1308,7 +1297,7 @@ Consulta GRATIS en los 50 estados">
 
         <div id="inicio"></div>
 
-        <!-- ===== MAIN CONTENT ===== -->
+        <!-- ===== MAIN ===== -->
         <main id="main-content" class="body-container-wrapper">
 
             <!-- BANNER -->
@@ -1455,7 +1444,7 @@ Consulta GRATIS en los 50 estados">
                 </section>
             </section>
 
-            <!-- TEXTO LEGALIZAMOS SUEÑOS -->
+            <!-- TEXTO LEGALIZAMOS -->
             <section class="hs_home-layout">
                 <section class="hs_home-row hs_home-row-five">
                     <article class="hs_home-row-five-title">
@@ -1466,7 +1455,7 @@ Consulta GRATIS en los 50 estados">
                 </section>
             </section>
 
-            <!-- SLIDER ABOGADOS -->
+            <!-- SLIDER -->
             <section class="hs_home-layout">
                 <section class="container-slider hs_home-row hs_home-row-five">
                     <div class="head_slide">
@@ -1532,7 +1521,7 @@ Consulta GRATIS en los 50 estados">
                 </section>
             </section>
 
-            <!-- CONTACTO FINAL -->
+            <!-- CONTACTO -->
             <section class="hs_home-layout">
                 <article class="hs_home-row hs_home-row-contact">
                     <img class="hs_home-row-contact-background-map" src="https://23992612.fs1.hubspotusercontent-na1.net/hubfs/23992612/raw_assets/public/website-theme/images/home/map.svg" alt="Mapa">
@@ -1659,8 +1648,8 @@ Consulta GRATIS en los 50 estados">
     <!-- ===== SCRIPTS ===== -->
     <script>
         // ACORDEÓN
-        document.querySelectorAll('.acordeon .contenedor').forEach(container => {
-            const label = container.querySelector('.etiqueta');
+        document.querySelectorAll('.acordeon .contenedor').forEach(function(container) {
+            var label = container.querySelector('.etiqueta');
             label.addEventListener('click', function() {
                 container.classList.toggle('active');
             });
@@ -1704,8 +1693,8 @@ Consulta GRATIS en los 50 estados">
         });
 
         // MODAL
-        const modal = document.getElementById('modalFormulario');
-        const cerrarBtn = document.getElementById('cerrarFormularioBtn');
+        var modal = document.getElementById('modalFormulario');
+        var cerrarBtn = document.getElementById('cerrarFormularioBtn');
 
         function abrirModal(e) {
             if (e) e.preventDefault();
@@ -1728,38 +1717,44 @@ Consulta GRATIS en los 50 estados">
             if (e.target === modal) cerrarModal();
         });
 
-        // WHATSAPP
-        const enviarBtn = document.getElementById('enviarWhatsAppBtn');
+        // WHATSAPP - CON EVENTO Purchase
+        var enviarBtn = document.getElementById('enviarWhatsAppBtn');
         enviarBtn.addEventListener('click', function() {
-            const nombre = document.getElementById('nombre').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const telefono = document.getElementById('telefono').value.trim();
-            const mensaje = document.getElementById('mensaje').value.trim();
+            var nombre = document.getElementById('nombre').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var telefono = document.getElementById('telefono').value.trim();
+            var mensaje = document.getElementById('mensaje').value.trim();
 
             if (!nombre || !email || !telefono) {
                 alert('Por favor, completa todos los campos obligatorios (Nombre, Correo y Teléfono).');
                 return;
             }
 
-            const textoWhatsApp = `Hola, soy ${nombre}.%0A` +
-                                 `Mi correo es: ${email}%0A` +
-                                 `Mi teléfono es: ${telefono}%0A` +
-                                 `Mensaje: ${mensaje || 'Sin mensaje adicional.'}`;
+            var textoWhatsApp = 'Hola, soy ' + nombre + '.%0A' +
+                'Mi correo es: ' + email + '%0A' +
+                'Mi teléfono es: ' + telefono + '%0A' +
+                'Mensaje: ' + (mensaje || 'Sin mensaje adicional.');
 
-            const numeroWhatsApp = '17879658614';
-            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoWhatsApp}`;
+            var numeroWhatsApp = '17879658614';
+            var urlWhatsApp = 'https://wa.me/' + numeroWhatsApp + '?text=' + textoWhatsApp;
 
+            // ============================================================
+            // DISPARAR EL PÍXEL DE META CON EVENTO Purchase
+            // ============================================================
             if (typeof fbq === 'function') {
-                fbq('track', 'Lead', {
+                fbq('track', 'Purchase', {
                     content_name: 'Solicitud de consulta',
                     content_category: 'Contacto',
                     value: 0,
                     currency: 'USD'
                 });
+                console.log('✅ Pixel de Meta: Evento "Purchase" enviado.');
+            } else {
+                console.warn('⚠️ Pixel de Meta no disponible.');
             }
 
             window.open(urlWhatsApp, '_blank');
-            setTimeout(() => cerrarModal(), 1500);
+            setTimeout(function() { cerrarModal(); }, 1500);
         });
 
         document.getElementById('formularioWhatsApp').addEventListener('submit', function(e) {
