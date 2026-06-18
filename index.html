@@ -25,26 +25,18 @@ Consulta GRATIS en los 50 estados">
     <meta http-equiv="content-language" content="en">
     <link rel="canonical" href="https://inmigracionaldia.com">
 
-    <!-- META PIXEL CON INICIALIZACIÓN LIMPIA -->
+    <!-- META PIXEL -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        
-        // Inicializar el píxel
-        fbq('init', '1038254238667328');
-        
-        // PageView siempre se dispara
-        fbq('track', 'PageView');
-        
-        // BLOQUEAR cualquier evento Lead automático que pueda existir
-        // Esto evita que se disparen Leads no deseados
-        console.log('✅ Pixel de Meta inicializado. Eventos Lead bloqueados.');
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1038254238667328');
+    fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1038254238667328&ev=PageView&noscript=1"
@@ -1655,36 +1647,6 @@ Consulta GRATIS en los 50 estados">
 
     <!-- ===== SCRIPTS ===== -->
     <script>
-        // ============================================================
-        // BLOQUEAR EVENTOS LEAD AUTOMÁTICOS
-        // ============================================================
-        // Sobrescribimos cualquier evento Lead que pueda estar configurado
-        // Esto evita que se disparen Leads no deseados
-        (function() {
-            // Guardamos referencia al fbq original
-            var originalFbq = window.fbq;
-            if (typeof originalFbq === 'function') {
-                // Creamos un wrapper que intercepta y bloquea eventos 'Lead'
-                window.fbq = function() {
-                    var args = Array.prototype.slice.call(arguments);
-                    // Si el primer argumento es 'track' y el segundo es 'Lead', lo ignoramos
-                    if (args[0] === 'track' && args[1] === 'Lead') {
-                        console.log('⛔ Evento Lead bloqueado automáticamente');
-                        return;
-                    }
-                    // Para cualquier otro evento, lo ejecutamos normalmente
-                    return originalFbq.apply(this, args);
-                };
-                // Replicamos las propiedades del fbq original
-                for (var key in originalFbq) {
-                    if (originalFbq.hasOwnProperty(key)) {
-                        window.fbq[key] = originalFbq[key];
-                    }
-                }
-                console.log('✅ Bloqueo de eventos Lead activado');
-            }
-        })();
-
         // ACORDEÓN
         document.querySelectorAll('.acordeon .contenedor').forEach(function(container) {
             var label = container.querySelector('.etiqueta');
@@ -1756,7 +1718,7 @@ Consulta GRATIS en los 50 estados">
         });
 
         // ============================================================
-        // WHATSAPP - CON EVENTO Purchase (FORZADO)
+        // WHATSAPP - EVENTO Lead
         // ============================================================
         var enviarBtn = document.getElementById('enviarWhatsAppBtn');
         enviarBtn.addEventListener('click', function() {
@@ -1779,32 +1741,16 @@ Consulta GRATIS en los 50 estados">
             var urlWhatsApp = 'https://wa.me/' + numeroWhatsApp + '?text=' + textoWhatsApp;
 
             // ============================================================
-            // DISPARAR EL PÍXEL DE META CON EVENTO Purchase (FORZADO)
+            // DISPARAR EL PÍXEL DE META CON EVENTO Lead
             // ============================================================
-            // Usamos el fbq original directamente (no el wrapper)
-            // Esto asegura que el evento Purchase se dispare correctamente
             if (typeof fbq === 'function') {
-                // Llamada directa y explícita al evento Purchase
-                fbq('track', 'Purchase', {
+                fbq('track', 'Lead', {
                     content_name: 'Solicitud de consulta',
                     content_category: 'Contacto',
                     value: 0,
                     currency: 'USD'
                 });
-                console.log('✅ Pixel de Meta: Evento "Purchase" enviado.');
-                
-                // También forzamos un segundo envío con un pequeño delay para asegurar
-                setTimeout(function() {
-                    if (typeof fbq === 'function') {
-                        fbq('track', 'Purchase', {
-                            content_name: 'Solicitud de consulta (confirmación)',
-                            content_category: 'Contacto',
-                            value: 0,
-                            currency: 'USD'
-                        });
-                        console.log('✅ Pixel de Meta: Evento "Purchase" reenviado (confirmación)');
-                    }
-                }, 200);
+                console.log('✅ Pixel de Meta: Evento "Lead" enviado.');
             } else {
                 console.warn('⚠️ Pixel de Meta no disponible.');
             }
