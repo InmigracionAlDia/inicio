@@ -105,7 +105,7 @@ Consulta GRATIS en los 50 estados">
             z-index: 1;
         }
 
-        /* ===== HEADER CON SOMBRA ===== */
+        /* ===== HEADER ===== */
         .header {
             background: #ffffff;
             box-shadow: 0 2px 20px rgba(0,0,0,0.06);
@@ -124,11 +124,11 @@ Consulta GRATIS en los 50 estados">
             align-items: center;
         }
         .header__logo img {
-            width: 160px;
+            width: 200px;
             transition: transform 0.3s ease;
         }
         .header__logo img:hover {
-            transform: scale(1.02);
+            transform: scale(1.03);
         }
         .box-llamada {
             display: flex;
@@ -190,7 +190,7 @@ Consulta GRATIS en los 50 estados">
             gap: 35px;
         }
         .logo-iad {
-            height: 38px;
+            height: 45px;
             transition: transform 0.3s ease;
         }
         .logo-iad:hover {
@@ -226,7 +226,7 @@ Consulta GRATIS en los 50 estados">
             width: 100%;
         }
 
-        /* ===== RESPONSIVE HEADER ===== */
+        /* ===== RESPONSIVE HEADER - LOGO MÁS GRANDE EN MÓVIL ===== */
         @media (max-width: 768px) {
             .header__container {
                 padding: 10px 16px;
@@ -234,7 +234,7 @@ Consulta GRATIS en los 50 estados">
                 gap: 8px;
             }
             .header__logo img {
-                width: 130px;
+                width: 160px;
             }
             .box-llamada {
                 padding: 8px 16px;
@@ -258,8 +258,10 @@ Consulta GRATIS en los 50 estados">
                 gap: 8px;
                 width: 100%;
             }
+            /* LOGO IAD MÁS GRANDE EN TABLET */
             .logo-iad {
-                height: 32px;
+                height: 55px !important;
+                /* DE 38px a 55px */
             }
             .items-menu {
                 gap: 16px;
@@ -276,7 +278,7 @@ Consulta GRATIS en los 50 estados">
                 padding: 8px 12px;
             }
             .header__logo img {
-                width: 110px;
+                width: 130px;
             }
             .box-llamada {
                 padding: 6px 14px;
@@ -289,18 +291,21 @@ Consulta GRATIS en los 50 estados">
             .box-header-new {
                 padding: 0 12px;
             }
+            /* LOGO IAD MUCHO MÁS GRANDE EN MÓVIL */
             .logo-iad {
-                height: 28px;
+                height: 65px !important;
+                /* DE 28px a 65px - MÁS DEL DOBLE */
             }
             .items-menu {
                 gap: 12px;
             }
             .item a {
-                font-size: 12px;
+                font-size: 13px;
+                /* UN POCO MÁS GRANDE PARA QUE COMBINE CON EL LOGO */
             }
         }
 
-        /* ===== SECCIONES CON ESTILO ===== */
+        /* ===== SECCIONES ===== */
         .hs_home-layout {
             max-width: 1200px;
             margin: 0 auto;
@@ -308,7 +313,7 @@ Consulta GRATIS en los 50 estados">
             position: relative;
         }
 
-        /* ===== BANNER PRINCIPAL MEJORADO ===== */
+        /* ===== BANNER PRINCIPAL ===== */
         .hs_home-main-wrapper-banner {
             background: linear-gradient(145deg, #ffffff 0%, #f0f2f5 100%);
             border-radius: 24px;
@@ -490,7 +495,6 @@ Consulta GRATIS en los 50 estados">
             gap: 20px;
             padding: 25px 0;
             position: relative;
-            transition: all 0.3s ease;
             border-radius: 12px;
             padding: 25px 20px;
             margin: 5px 0;
@@ -2161,7 +2165,6 @@ Consulta GRATIS en los 50 estados">
             var numeroWhatsApp = '17879658614';
             var urlWhatsApp = 'https://wa.me/' + numeroWhatsApp + '?text=' + textoWhatsApp;
 
-            // Disparar evento Lead
             if (typeof fbq === 'function') {
                 fbq('track', 'Lead', {
                     content_name: 'Solicitud de consulta',
